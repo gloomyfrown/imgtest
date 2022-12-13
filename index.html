@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
-    <body>
-        <a href="#" id="click_me">Click Me</a>
-        <script type="text/javascript">
-        document.getElementById('click_me').addEventListener("click", function(event) {
-            (function(event) {
-                var img = document.createElement("img");
-                img.src = "https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/1x";
-                img.srcset = "https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/2x 2x, https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/3x 4x";
-                img.alt = "test"                
-                document.body.appendChild(img);
-            }).call(document.getElementById('click_me'), event);
-        });
-        </script>
-        <br>
-        <br>
-    </body>
-</html>
 
-<!-- <img src="https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/1x" srcset="https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/2x 2x, https://cdn.betterttv.net/emote/5ec39a9db289582eef76f733/3x 4x" alt="NOPERS" class="chat-line__message--emote bttv-emote-image"> -->
+<head>
+    <script type="text/javascript">
+        var gifURL = "https://raw.githubusercontent.com/gloomyfrown/imgtest/9c7f8299c4b0dd9a270a0453daa544ef698beb03/ff-spinning-logo.gif";
+
+        function srcTest() {
+            var img = document.createElement("img");
+                img.src = gifURL;
+                img.alt = ""
+                document.body.appendChild(img);
+        }
+        
+        function srcsetTest() {
+            var img = document.createElement("img");
+                img.srcset = gifURL;
+                img.alt = "";
+                document.body.appendChild(img);
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="srcTest()">Create img element using src</button>
+    <button onclick="srcsetTest()">Create img element using srcset</button>
+    <br>
+</body>
+
+</html>
